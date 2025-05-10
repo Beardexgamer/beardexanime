@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta verification tag -->
+  <meta name="6a97888e-site-verification" content="3236be7fb9e7eba22cf0c57d20d00379">
+
+  <title>BeardexAnime</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #0f1014;
+      color: white;
+      line-height: 1.5;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+    }
+    
+    /* Header styles */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      padding: 0 16px;
+      border-bottom: 1px solid #1f2937;
+      background-color: rgba(15, 16, 20, 0.95);
+      backdrop-filter: blur(4px);
+    }
+    
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .logo-text {
+      font-weight: bold;
+    }
+    
+    .nav {
+      display: none;
+    }
+    
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+    
+    .nav-link {
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-link:hover {
+      color: #60a5fa;
+    }
+    
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .search-container {
+      position: relative;
+      display: none;
+    }
+    
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+    }
+    
+    .search-input {
+      width: 200px;
+      padding: 8px 8px 8px 36px;
+      border-radius: 9999px;
+      border: 1px solid #374151;
+      background-color: #1f2937;
+      color: white;
+      font-size: 14px;
+    }
+    
+    @media (min-width: 768px) {
+      .search-input {
+        width: 256px;
+      }
+    }
+    
+    .search-input::placeholder {
+      color: #9ca3af;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    
+    .search-results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #1f2937;
+      border-radius: 8px;
+      margin-top: 8px;
+      max-height: 400px;
+      overflow-y: auto;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      z-index: 100;
+      display: none;
+    }
+    
+    .search-results.active {
+      display: block;
+    }
+    
+    .search-result-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-bottom: 1px solid #374151;
+      transition: background-color 0.2s;
+    }
+    
+    .search-result-item:hover {
+      background-color: #374151;
+    }
+    
+    .search-result-img {
+      width: 60px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    
+    .search-result-info {
+      flex: 1;
+    }
+    
+    .search-result-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .search-result-meta {
+      font-size: 12px;
+      color: #9ca3af;
+    }
+    
+    .subscribe-btn {
+      display: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #3b82f6;
+      transition: color 0.2s;
+    }
+    
+    .subscribe-btn:hover {
+      color: #60a5fa;
+    }
+    
+    .icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      transition: color 0.2s;
+    }
+    
+    .icon-btn:hover {
+      color: white;
+    }
+    
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 9999px;
+      object-fit: cover;
+    }
+    
+    /* Hero banner styles */
+    .hero-banner {
+      position: relative;
+      height: 50vh;
+      width: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-banner {
+        height: 70vh;
+      }
+    }
+    
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+      z-index: 10;
+    }
+    
+    .hero-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+      padding: 24px;
+      width: 100%;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-content {
+        padding: 48px;
+        width: 50%;
+      }
+    }
+    
+    .hero-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 32px;
+      }
+    }
+    
+    .hero-meta {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+    
+    .hero-desc {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #e5e7eb;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-desc {
+        -webkit-line-clamp: 3;
+      }
+    }
+    
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background-color: white;
+      color: black;
+    }
+    
+    .btn-primary:hover {
+      background-color: #e5e7eb;
+    }
+    
+    .btn-outline {
+      border: 1px solid #4b5563;
+      color: white;
+    }
+    
+    .btn-outline:hover {
+      background-color: #1f2937;
+    }
+    
+    /* Content tabs styles */
+    .content-section {
+      padding: 24px 16px;
+    }
+    
+    @media (min-width: 768px) {
+      .content-section {
+        padding: 32px;
+      }
+    }
+    
+    .tabs {
+      width: 100%;
+    }
+    
+    .tabs-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-bottom: 24px;
+      width: 100%;
+    }
+    
+    .tab {
+      padding: 8px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    
+    .tab.active {
+      background-color: #1f2937;
+      color: white;
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    /* Content row styles */
+    .content-row {
+      margin-bottom: 32px;
+      position: relative;
+    }
+    
+    .row-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    
+    .row-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .view-all {
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      color: #9ca3af;
+      transition: color 0.2s;
+    }
+    
+    .view-all:hover {
+      color: white;
+    }
+    
+    /* Carousel styles */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .carousel-content {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+      padding: 4px 1px;
+      margin: -4px -1px;
+    }
+    
+    .carousel-content::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    
+    .carousel-item {
+      flex: 0 0 auto;
+      width: calc(50% - 8px);
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    
+    .carousel-item:hover {
+      transform: scale(1.05);
+    }
+    
+    @media (min-width: 640px) {
+      .carousel-item {
+        width: calc(33.333% - 11px);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .carousel-item {
+        width: calc(25% - 12px);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .carousel-item {
+        width: calc(16.666% - 13px);
+      }
+    }
+    
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .carousel-nav:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .carousel-nav.prev {
+      left: 8px;
+    }
+    
+    .carousel-nav.next {
+      right: 8px;
+    }
+    
+    .content-img {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .content-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .carousel-item:hover .content-overlay {
+      opacity: 1;
+    }
+    
+    .content-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 12px;
+    }
+    
+    .content-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .content-meta {
+      font-size: 12px;
+      color: #d1d5db;
+    }
+    
+    /* Footer styles */
+    .footer {
+      border-top: 1px solid #db1818;
+      background-color: #0f1014;
+      padding: 24px 16px;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+    
+    .footer-link:hover {
+      color: white;
+    }
+    
+    @media (min-width: 768px) {
+      .header {
+        padding: 0 24px;
+      }
+      
+      .nav {
+        display: block;
+      }
+      
+      .search-container {
+        display: block;
+      }
+      
+      .subscribe-btn {
+        display: inline-flex;
+      }
+      
+      .mobile-search {
+        display: none;
+      }
+      
+      .footer {
+        padding: 24px 32px;
+      }
+      
+      .footer-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    
+    /* Mobile search overlay */
+    .mobile-search-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(15, 16, 20, 0.95);
+      z-index: 100;
+      display: none;
+      padding: 16px;
+      animation: fadeIn 0.2s ease-out;
+    }
+    
+    .mobile-search-overlay.active {
+      display: block;
+    }
+    
+    .mobile-search-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    
+    .mobile-search-input {
+      flex: 1;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      border: 1px solid #374151;
+      background-color: #1f2937;
+      color: white;
+      font-size: 14px;
+    }
+    
+    .mobile-search-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    
+    .mobile-close-btn {
+      color: #9ca3af;
+    }
+    
+    .mobile-search-results {
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="/" class="logo">
+        <!-- Logo image: 40x40px -->
+        <img src="https://i.ibb.co/fYGMtVCZ/photo-6098006219563319763-y-2-1.png" alt="BeardexAnime Logo" width="40" height="40" class="logo-img">
+        <span class="logo-text">BeardexAnime</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/tv" class="nav-link">TV</a></li>
+          <li><a href="/movies" class="nav-link">Movies</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-right">
+      <div class="search-container">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" placeholder="Search" class="search-input" id="searchInput">
+        <div class="search-results" id="searchResults">
+          <!-- Search results will be populated here -->
+        </div>
+      </div>
+      <button class="icon-btn mobile-search" id="mobileSearchBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </div>
+  </header>
+
+  <!-- Mobile search overlay -->
+  <div class="mobile-search-overlay" id="mobileSearchOverlay">
+    <div class="mobile-search-header">
+      <button class="mobile-close-btn" id="mobileCloseBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <input type="search" placeholder="Search" class="mobile-search-input" id="mobileSearchInput">
+    </div>
+    <div class="mobile-search-results" id="mobileSearchResults">
+      <!-- Mobile search results will be populated here -->
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Banner (Image: 1600x800px) -->
+    <section class="hero-banner">
+      <div class="hero-gradient"></div>
+      <img src='image/check purpose.jpg' alt="Loki: Season 2" class="hero-img">
+      <div class="hero-content">
+        <h1 class="hero-title">One Piece</h1>
+        <p class="hero-meta">1999 • Fantasy, Sci-Fi • U/A 13+</p>
+        <p class="hero-desc">
+          Monkey D. Luffy is determined to become King of the Pirates. With his rubber powers from a Devil Fruit, he sails the Grand Line in search of the legendary One Piece. Along the way, he builds his Straw Hat crew, forming strong bonds and chasing dreams—never stopping until they all reach theirs.
+        </p>
+        <div class="hero-actions">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Watch Now
+          </button>
+          <button class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Add to Watchlist
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Tabs -->
+    <section class="content-section">
+      <div class="tabs">
+        <div class="tabs-list">
+          <button class="tab active" data-tab="trending">Trending</button>
+          <button class="tab" data-tab="movies">Movies</button>
+          <button class="tab" data-tab="shows">Shows</button>
+          <button class="tab" data-tab="K-Drama">K-Drama</button>
+        </div>
+
+        <div class="tab-content active" id="trending">
+          <!-- Trending Now -->
+          <div class="content-row">
+            <div class="row-header">
+              <h2 class="row-title">Trending Now</h2>
+              <a href="#" class="view-all">
+                View All
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="carousel-container">
+              <button class="carousel-nav prev" data-carousel="trending-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-content" id="trending-carousel">
+                <!-- Content Cards (Images: 480x270px) -->
+                <a href="naruto-episodes.html" class="carousel-item" data-title="The-Unaware-Altier" data-category="Fantasy">
+                    <img
+                      src="image/grid.jpg"  
+                      data-preview="https://vz-77b320ab-237.b-cdn.net/04c8e229-055b-4c20-9c34-14e7a12fba2c/preview.webp"  
+                      alt="The-Unaware-Altier"
+                      class="content-img preview-thumb"
+                    >
+                    <div class="content-overlay"></div>
+                    <div class="content-info">
+                      <h3 class="content-title">The-Unaware-Altier</h3>
+                      <p class="content-meta">2023 • Fantasy</p>
+                    </div>
+                  </a>
+                                     
+                <a href="i parry everything.html" class="carousel-item" data-title="I parry Everything" data-category="Fantasy, Action">
+                  <img src="image/I parry grid trend grid index.png" alt="I parry Everything" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">I parry Everything</h3>
+                    <p class="content-meta">2023 • Action</p>
+                  </div>
+                </a>
+                <a href="Devil May cry.html" class="carousel-item" data-title="Devil May Cry" data-category="Sci-Fi, Fantasy, Action">
+                  <img src="image/devil may cry trend grid index.jpg" alt="Devil May Cry" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Devil May Cry</h3>
+                    <p class="content-meta">2025 • Sci-Fi</p>
+                  </div>
+                </a>
+                <a href="overlordseason1.html" class="carousel-item" data-title="Over Lord" data-category="Isekai, Animation, Action, Dark fantasy, Science fiction, Adventure, Fantasy, Supernatural, Action fiction">
+                  <img src="image/overlord indexx grid.jpg" alt="Over Lord" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Over Lord season 1</h3>
+                    <p class="content-meta">2025 • Action, Dark fantasy, Science fiction</p>
+                  </div>
+                </a>
+                <a href="Reborn as a Vending Machine, I Now Wander the Dungeon.html" class="carousel-item" data-title="Reborn as a Vending Machine, I Now Wander the Dungeon" data-category="Comedy, Fantasy, Adventure">
+                  <img src="image/vending machine grid trend grid index.jpeg" alt="Reborn as a Vending Machine, I Now Wander the Dungeon" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Reborn as a Vending Machine, I Now Wander the Dungeon</h3>
+                    <p class="content-meta">**** • Adventure</p>
+                  </div>
+                </a>
+                <a href="One Piece.html" class="carousel-item" data-title="One Piece" data-category="Comedy, Fantasy, Adventure">
+                  <img src="image/one piece grid trend grid index.jpeg" alt="One Piece" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">One Piece</h3>
+                    <p class="content-meta">1999 • Drama</p>
+                  </div>
+                </a>
+                <a href="/watch/7" class="carousel-item" data-title="Jujutsu Kaisen" data-category="Action,supernatural">
+                  <img src="image/jjk trend grid index.jpeg" alt="Jujutsu Kaisen" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Jujutsu Kaisen</h3>
+                    <p class="content-meta">**** • Action,supernatural</p>
+                  </div>
+                </a>
+                <a href="/watch/8" class="carousel-item" data-title="Spy × Family" data-category="Action, Comedy, Family">
+                  <img src="image/spy x family trend grid index.jpeg" alt="Spy × Family" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Spy × Family</h3>
+                    <p class="content-meta">**** • Action, Comedy, Family</p>
+                  </div>
+                </a>
+                <a href="/watch/8" class="carousel-item" data-title="My Dress-Up Darling" data-category="Romance, Slice of Life">
+                  <img src="image/my dress up trend grid index.jpeg" alt="My Dress-Up Darling" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">My Dress-Up Darling</h3>
+                    <p class="content-meta">**** • Romance, Slice of Life</p>
+                  </div>
+                </a>
+                <a href="/watch/8" class="carousel-item" data-title="The Apothecary Diaries" data-category="Historical, Mystery">
+                  <img src="image/The Apothecary Diaries grid trend.jpg" alt="The Apothecary Diaries" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">The Apothecary Diaries</h3>
+                    <p class="content-meta">**** • Historical, Mystery</p>
+                  </div>
+                </a>
+                <a href="/watch/8" class="carousel-item" data-title="That Time I Got Reincarnated as a Slime" data-category="Fantasy, Isekai">
+                  <img src="image/That Time I Got Reincarnated as a Slime trend grid index.jpg" alt="That Time I Got Reincarnated as a Slime" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">That Time I Got Reincarnated as a Slime</h3>
+                    <p class="content-meta">**** • Fantasy, Isekai</p>
+                  </div>
+                </a>
+                <a href="/watch/8" class="carousel-item" data-title="Mushoku Tensei: Jobless Reincarnation" data-category="Fantasy, Drama">
+                  <img src="https://via.placeholder.com/480x270?text=Moon+Knight" alt="Mushoku Tensei: Jobless Reincarnation" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Mushoku Tensei: Jobless Reincarnation</h3>
+                    <p class="content-meta">**** • Fantasy, Drama</p>
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-nav next" data-carousel="trending-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular in India -->
+          <div class="content-row">
+            <div class="row-header">
+              <h2 class="row-title">Popular in India</h2>
+              <a href="#" class="view-all">
+                View All
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="carousel-container">
+              <button class="carousel-nav prev" data-carousel="new-releases-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-content" id="new-releases-carousel">
+                <!-- Content Cards (Images: 480x270px) -->
+                <a href="/watch/9" class="carousel-item" data-title="sukimichi Moonlit Fantasy" data-category="Action">
+                  <img src="image/inida INIDA GRID grid.jpg" alt="sukimichi Moonlit Fantasy" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Tsukimichi Moonlit Fantasy </h3>
+                    <p class="content-meta">2023 • Action</p>
+                  </div>
+                </a>
+                <a href="/watch/10" class="carousel-item" data-title="Rurouni Kenshin" data-category="Adventure, Action, Romance">
+                  <img src="image/ruroni kenshin INIDA GRID grid.jpg" alt="IRurouni Kenshin" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Rurouni Kenshin</h3>
+                    <p class="content-meta">2023 • Adventure</p>
+                  </div>
+                </a>
+                <a href="/watch/10" class="carousel-item" data-title="mashle magic and muscles" data-category="Adventure, Action, Comedy">
+                  <img src="image/mshle INIDA GRID grid.jpg" alt="mashle magic and muscles" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">mashle magic and muscles</h3>
+                    <p class="content-meta">2023 • Adventure, Action, Comedy</p>
+                  </div>
+                </a>
+                <a href="/watch/10" class="carousel-item" data-title="shangri la frontier" data-category="Adventure, Action, Sci-Fi">
+                  <img src="image/shagrila grid india.jpg" alt="shangri la frontier" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">shangri la frontier</h3>
+                    <p class="content-meta">2023 • Adventure, Action, Sci-Fi</p>
+                  </div>
+                </a>
+                <a href="/watch/11" class="carousel-item" data-title="Dead mouth Dead play" data-category="Animation">
+                  <img src="image/dead-mount-death-play INIDA GRID grid.jpg" alt="Dead mouth Dead play" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Dead mouth Dead play</h3>
+                    <p class="content-meta">2023 • Animation</p>
+                  </div>
+                </a>
+                <a href="Classroom of the elite.html" class="carousel-item" data-title="Classroom of the elite" data-category="Drama, Thriller">
+                  <img src="image/classroom-of-the-elite grid view.png" alt="Classroom of the elite" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Classroom of the elite</h3>
+                    <p class="content-meta">****• Drama, Thriller</p>
+                  </div>
+                </a>
+                <a href="/watch/11" class="carousel-item" data-title="Demon Slayer" data-category="Action, Supernatural">
+                  <img src="image/Index pplr india/dead-mount-death-play INIDA GRID 480*270px.jpg" alt="Demon Slayer" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Demon Slayer</h3>
+                    <p class="content-meta">****• Action, Supernatural</p>
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-nav next" data-carousel="new-releases-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular Shows -->
+          <div class="content-row">
+            <div class="row-header">
+              <h2 class="row-title">Popular Shows</h2>
+              <a href="#" class="view-all">
+                View All
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="carousel-container">
+              <button class="carousel-nav prev" data-carousel="popular-shows-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-content" id="popular-shows-carousel">
+                <!-- Content Cards (Images: 480x270px) -->
+                <a href="/watch/16" class="carousel-item" data-title="The Last of Us" data-category="Drama">
+                  <img src="https://via.placeholder.com/480x270?text=Last+of+Us" alt="The Last of Us" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">The Last of Us</h3>
+                    <p class="content-meta">2023 • Drama</p>
+                  </div>
+                </a>
+                <a href="/watch/17" class="carousel-item" data-title="House of the Dragon" data-category="Fantasy">
+                  <img src="https://via.placeholder.com/480x270?text=House+of+Dragon" alt="House of the Dragon" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">House of the Dragon</h3>
+                    <p class="content-meta">2023 • Fantasy</p>
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-nav next" data-carousel="popular-shows-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="movies">
+          <!-- Movies content will be shown when Movies tab is clicked -->
+          <div class="content-row">
+            <div class="row-header">
+              <h2 class="row-title">Movies</h2>
+              <a href="#" class="view-all">
+                View All
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="carousel-container">
+              <button class="carousel-nav prev" data-carousel="action-movies-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-content" id="action-movies-carousel">
+                <!-- Content Cards (Images: 480x270px) -->
+                <a href="/watch/22" class="carousel-item" data-title="Spirited Away" data-category="Fantasy, Adventure">
+                  <img src="https://via.placeholder.com/480x270?text=Mission+Impossible" alt="Spirited Away" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Spirited Away</h3>
+                    <p class="content-meta">**** • Fantasy, Adventure</p>
+                  </div>
+                </a>
+                <a href="/watch/23" class="carousel-item" data-title="Princess Mononoke" data-category="Fantasy, Historical">
+                  <img src="https://via.placeholder.com/480x270?text=Fast+X" alt="Princess Mononoke" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Princess Mononoke</h3>
+                    <p class="content-meta">**** • Action</p>
+                  </div>
+                </a>
+                <a href="/watch/24" class="carousel-item" data-title="Ponyo" data-category="Action">
+                  <img src="https://via.placeholder.com/480x270?text=John+Wick+4" alt="Ponyo" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Ponyo</h3>
+                    <p class="content-meta">**** • Fantasy, Family</p>
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-nav next" data-carousel="new-releases-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular Shows -->
+          <div class="content-row">
+            <div class="row-header">
+              <h2 class="row-title">Popular Shows</h2>
+              <a href="#" class="view-all">
+                View All
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="carousel-container">
+              <button class="carousel-nav prev" data-carousel="popular-shows-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-content" id="popular-shows-carousel">
+                <!-- Content Cards (Images: 480x270px) -->
+                <a href="/watch/16" class="carousel-item" data-title="The Last of Us" data-category="Drama">
+                  <img src="https://via.placeholder.com/480x270?text=Last+of+Us" alt="The Last of Us" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">The Last of Us</h3>
+                    <p class="content-meta">2023 • Drama</p>
+                  </div>
+                </a>
+                <a href="/watch/17" class="carousel-item" data-title="House of the Dragon" data-category="Fantasy">
+                  <img src="https://via.placeholder.com/480x270?text=House+of+Dragon" alt="House of the Dragon" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">House of the Dragon</h3>
+                    <p class="content-meta">2023 • Fantasy</p>
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-nav next" data-carousel="popular-shows-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="shows">
+          <!-- Shows content will be shown when Shows tab is clicked -->
+          <div class="content-row">
+            <div class="row-header">
+              <h2 class="row-title">Popular Series</h2>
+              <a href="#" class="view-all">
+                View All
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="carousel-container">
+              <button class="carousel-nav prev" data-carousel="popular-series-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-content" id="popular-series-carousel">
+                <!-- Content Cards (Images: 480x270px) -->
+                <a href="/watch/27" class="carousel-item" data-title="Stranger Things" data-category="Sci-Fi">
+                  <img src="https://via.placeholder.com/480x270?text=Stranger+Things" alt="Stranger Things" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Stranger Things</h3>
+                    <p class="content-meta">2022 • Sci-Fi</p>
+                  </div>
+                </a>
+                <a href="/watch/28" class="carousel-item" data-title="Game of Thrones" data-category="Fantasy">
+                  <img src="https://via.placeholder.com/480x270?text=Game+of+Thrones" alt="Game of Thrones" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Game of Thrones</h3>
+                    <p class="content-meta">2019 • Fantasy</p>
+                  </div>
+                </a>
+                <a href="/watch/29" class="carousel-item" data-title="Breaking Bad" data-category="Drama">
+                  <img src="https://via.placeholder.com/480x270?text=Breaking+Bad" alt="Breaking Bad" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Breaking Bad</h3>
+                    <p class="content-meta">2013 • Drama</p>
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-nav next" data-carousel="popular-series-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="K-Drama">
+          <!-- Sports content will be shown when Sports tab is clicked -->
+          <div class="content-row">
+            <div class="row-header">
+              <h2 class="row-title">Live Matches</h2>
+              <a href="#" class="view-all">
+                View All
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="carousel-container">
+              <button class="carousel-nav prev" data-carousel="live-matches-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <div class="carousel-content" id="live-matches-carousel">
+                <!-- Content Cards (Images: 480x270px) -->
+                <a href="/watch/30" class="carousel-item" data-title="India vs Australia" data-category="Cricket">
+                  <img src="https://via.placeholder.com/480x270?text=India+vs+Australia" alt="India vs Australia" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">India vs Australia</h3>
+                    <p class="content-meta">Cricket • Live</p>
+                  </div>
+                </a>
+                <a href="/watch/31" class="carousel-item" data-title="Premier League" data-category="Football">
+                  <img src="https://via.placeholder.com/480x270?text=Premier+League" alt="Premier League" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Premier League</h3>
+                    <p class="content-meta">Football • Live</p>
+                  </div>
+                </a>
+                <a href="/watch/32" class="carousel-item" data-title="Formula 1" data-category="Racing">
+                  <img src="https://via.placeholder.com/480x270?text=Formula+1" alt="Formula 1" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Formula 1</h3>
+                    <p class="content-meta">Racing • Live</p>
+                  </div>
+                </a>
+              </div>
+              <button class="carousel-nav next" data-carousel="live-matches-carousel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <p>© 2025 BeardexAnime. All Rights Reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Terms of Use</a>
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Help Center</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tab switching functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.tab');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabId = tab.getAttribute('data-tab');
+          
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          // Add active class to clicked tab and corresponding content
+          tab.classList.add('active');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+
+      // Carousel navigation
+      const carouselNavs = document.querySelectorAll('.carousel-nav');
+      
+      carouselNavs.forEach(nav => {
+        nav.addEventListener('click', () => {
+          const carouselId = nav.getAttribute('data-carousel');
+          const carousel = document.getElementById(carouselId);
+          const scrollAmount = carousel.clientWidth * 0.8;
+          
+          if (nav.classList.contains('prev')) {
+            carousel.scrollBy({
+              left: -scrollAmount,
+              behavior: 'smooth'
+            });
+          } else {
+            carousel.scrollBy({
+              left: scrollAmount,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Search functionality
+      const searchInput = document.getElementById('searchInput');
+      const searchResults = document.getElementById('searchResults');
+      const mobileSearchBtn = document.getElementById('mobileSearchBtn');
+      const mobileSearchOverlay = document.getElementById('mobileSearchOverlay');
+      const mobileCloseBtn = document.getElementById('mobileCloseBtn');
+      const mobileSearchInput = document.getElementById('mobileSearchInput');
+      const mobileSearchResults = document.getElementById('mobileSearchResults');
+
+      const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        const previewSrc = img.getAttribute('data-preview');
+        
+        // Only load the preview if it has not been previewed yet
+        if (previewSrc && !img.classList.contains('previewed')) {
+          img.src = previewSrc;  // Update the image source to the preview
+          img.classList.add('previewed');  // Mark the image as previewed
+        }
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '100px',
+    threshold: 0.1
+  });
+
+  // Start observing images with class `preview-thumb`
+  document.querySelectorAll('.preview-thumb').forEach(img => {
+    observer.observe(img);
+  });
+      // Create a dataset of all content
+      const allContentCards = document.querySelectorAll('.carousel-item');
+      const contentData = Array.from(allContentCards).map(card => {
+        return {
+          title: card.getAttribute('data-title'),
+          category: card.getAttribute('data-category'),
+          image: card.querySelector('img').src,
+          link: card.getAttribute('href')
+        };
+      });
+      
+      // Function to filter content based on search term
+      function filterContent(searchTerm) {
+        if (searchTerm.length === 0) return [];
+        
+        return contentData.filter(item => {
+          return item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                 item.category.toLowerCase().includes(searchTerm.toLowerCase());
+        });
+      }
+      
+      // Function to render search results
+      function renderSearchResults(container, results) {
+        container.innerHTML = '';
+        
+        if (results.length === 0) {
+          container.innerHTML = '<div class="search-result-item">No results found</div>';
+        } else {
+          results.forEach(item => {
+            const resultItem = document.createElement('a');
+            resultItem.href = item.link;
+            resultItem.className = 'search-result-item';
+            resultItem.innerHTML = `
+              <img src="${item.image}" alt="${item.title}" class="search-result-img">
+              <div class="search-result-info">
+                <h3 class="search-result-title">${item.title}</h3>
+                <p class="search-result-meta">${item.category}</p>
+              </div>
+            `;
+            container.appendChild(resultItem);
+          });
+        }
+      }
+      
+      // Desktop search functionality
+      if (searchInput) {
+        searchInput.addEventListener('focus', () => {
+          if (searchInput.value.length > 0) {
+            const results = filterContent(searchInput.value);
+            renderSearchResults(searchResults, results);
+            searchResults.classList.add('active');
+          }
+        });
+        
+        searchInput.addEventListener('blur', () => {
+          setTimeout(() => {
+            searchResults.classList.remove('active');
+          }, 200);
+        });
+        
+        searchInput.addEventListener('input', () => {
+          const searchTerm = searchInput.value.trim();
+          
+          if (searchTerm.length === 0) {
+            searchResults.classList.remove('active');
+            return;
+          }
+          
+          const results = filterContent(searchTerm);
+          renderSearchResults(searchResults, results);
+          searchResults.classList.add('active');
+        });
+      }
+      
+      // Mobile search functionality
+      if (mobileSearchBtn) {
+        mobileSearchBtn.addEventListener('click', () => {
+          mobileSearchOverlay.classList.add('active');
+          mobileSearchInput.focus();
+        });
+      }
+      
+      if (mobileCloseBtn) {
+        mobileCloseBtn.addEventListener('click', () => {
+          mobileSearchOverlay.classList.remove('active');
+        });
+      }
+      
+      if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('input', () => {
+          const searchTerm = mobileSearchInput.value.trim();
+          const results = filterContent(searchTerm);
+          renderSearchResults(mobileSearchResults, results);
+        });
+      }
+    });
+    
+  </script>
+</body>
+</html>
