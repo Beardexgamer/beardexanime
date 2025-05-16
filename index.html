@@ -15,7 +15,6 @@
      crossorigin="anonymous"></script>
 
 
-
   <!-- Primary SEO Meta Tags -->
 <title>BeardexAnime - Watch Hindi Dubbed Anime Cartoons Online Free</title>
 <meta name="title" content="BeardexAnime - Watch Hindi Dubbed Anime Cartoons Online Free" />
@@ -716,9 +715,83 @@
       height: 100%;
       border: none;
     }
+    mux-player <style>
+  .carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  .carousel-content {
+    display: flex;
+    gap: 16px;
+  }
+
+  .carousel-item {
+    display: inline-block;
+    position: relative;
+    width: 220px;
+    height: 124px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #111;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 8px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+  }
+
+  .content-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .content-meta {
+    font-size: 12px;
+    color: #ccc;
+  }
+
+  .row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4px;
+    margin-top: 24px;
+  }
+
+  .row-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .view-all {
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: none;
+  }
+ </style>
+</head>
+<body>
   </style>
 </head>
 <body>
+  
   <header class="header">
     <div class="header-left">
       <a href="index.html" class="logo">
@@ -939,6 +1012,7 @@
               </button>
             </div>
           </div>
+           
 
           <!-- Popular in India -->
           <div class="content-row">
@@ -1105,12 +1179,20 @@
                     <p class="content-meta">2025 • Action</p>
                   </div>
                 </a>
-                <a href="https://iframe.mediadelivery.net/play/423812/d475d0e7-be86-4c2b-91fc-a7ba2a71da4b" class="carousel-item" data-title="Mufasa" data-category="Adventure, Comedy">
+                <a href="https://iframe.mediadelivery.net/play/423812/d475d0e7-be86-4c2b-91fc-a7ba2a71da4b" class="carousel-item" data-title="Mufasa(the lion king0)" data-category="Adventure, Comedy">
                   <img src="image/mufasa movie grdi.jpg" alt="Mufasa" class="content-img">
                   <div class="content-overlay"></div>
                   <div class="content-info">
-                    <h3 class="content-title">Mufasa-2</h3>
+                    <h3 class="content-title">The lion King-2</h3>
                     <p class="content-meta">*2024 • Fantasy, Family</p>
+                  </div>
+                </a>
+                <a href="https://iframe.mediadelivery.net/embed/423812/fdbd8d46-8ae3-4e31-8076-40944fef26af?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="The lion King" data-category="Adventure, Comedy">
+                  <img src="image/mufasa movie grdi.jpg" alt="The lion King" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">The lion King</h3>
+                    <p class="content-meta">*2019 • Fantasy, Family</p>
                   </div>
                 </a>
                 <a href="https://iframe.mediadelivery.net/play/423812/4bb4e731-01de-4977-b6c0-750cb1d57c89" class="carousel-item" data-title="KGF-1" data-category="Action, drama, KGF">
@@ -1137,6 +1219,65 @@
               </button>
             </div>
           </div>
+
+          <!-- Mux Player -->
+  <div id="player-container">
+  <mux-player
+    id="main-player"
+    style="width: 100%; max-width: 1000px; margin: auto; display: none;" <!-- hidden initially -->
+  ></mux-player>
+</div>
+
+<!-- Featured Movies Carousel -->
+<div class="content-row">
+  <div class="row-header">
+    <h2 class="row-title">Featured Movies</h2>
+    <a href="#" class="view-all">View All &rarr;</a>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-content">
+
+      <!-- Movie 1 -->
+      <div class="carousel-item" onclick="playMux('UdPsZQ3ly3lA00ItQtf5F9VJ6eLX1XkXpwsaU5i2lubQ', 'KGF 1')">
+        <img src="images/kgf1.jpg" alt="KGF 1">
+        <div class="content-info">
+          <div class="content-title">KGF 1</div>
+          <div class="content-meta">2018 • Action</div>
+        </div>
+      </div>
+
+      <!-- Movie 2 -->
+      <div class="carousel-item" onclick="playMux('l7b02XDOWuMn00gcj2B00s6x1ev7NB5v3mY5rJfvKMPUhk', 'I Parry Everything Ep 01')">
+        <img src="images/parry1.jpg" alt="I Parry Everything">
+        <div class="content-info">
+          <div class="content-title">Parry Everything</div>
+          <div class="content-meta">2024 • Anime</div>
+        </div>
+      </div>
+
+      <!-- Movie 3 -->
+      <div class="carousel-item" onclick="playMux('your-playback-id-3', 'Movie 3 Title')">
+        <img src="images/movie3.jpg" alt="Movie 3">
+        <div class="content-info">
+          <div class="content-title">Movie 3</div>
+          <div class="content-meta">2023 • Drama</div>
+        </div>
+      </div>
+
+      <!-- Movie 4 -->
+      <div class="carousel-item" onclick="playMux('your-playback-id-4', 'Movie 4 Title')">
+        <img src="images/movie4.jpg" alt="Movie 4">
+        <div class="content-info">
+          <div class="content-title">Movie 4</div>
+          <div class="content-meta">2022 • Sci-Fi</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
          <!-- Popular in India -->
 <div class="content-row">
@@ -1276,7 +1417,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="One Piece Clockwork Island Adventure 2001" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/play/423812/fd84dfeb-d087-4075-9c00-b399bfc84b3c" class="carousel-item" data-title="One Piece Clockwork Island Adventure 2001" data-category="Action, Supernatural">
         <img src="image/one piece 2001.jpeg" alt="One Piece Clockwork Island Adventure 2001" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1285,7 +1426,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Crayon Shin-chan the Movie Our Dinosaur Diary" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/1addb78d-6e21-4a09-8f4f-d93ae401b25d?autoplay=true&loop=false&muted=true&preload=true&responsive=true" class="carousel-item" data-title="Crayon Shin-chan the Movie Our Dinosaur Diary" data-category="Action, Supernatural">
         <img src="image/Shinchan dinasour movie.jpeg" alt="Crayon Shin-chan the Movie Our Dinosaur Diary" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1294,7 +1435,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Look Back" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/254ac8d6-688c-4da2-981a-f46a189f9ffd?autoplay=true&loop=false&muted=true&preload=true&responsive=true" class="carousel-item" data-title="Look Back" data-category="Action, Supernatural">
         <img src="image/lookback movie.png" alt="Look Back" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1303,7 +1444,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Ne Zha 2" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/e9dec958-4c69-48f4-90de-4f2937384186?autoplay=true&loop=false&muted=true&preload=true&responsive=true" class="carousel-item" data-title="Ne Zha 2" data-category="Action, Supernatural">
         <img src="image/Ne-zha 2.jpeg" alt="Ne Zha 2" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1312,7 +1453,7 @@
         </div>
       </a>
       
-      <a href="/watch/13" class="carousel-item" data-title="Mars Express" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/8ab7d6ee-8015-48d1-b0a0-dcc6949b91eb?autoplay=true&loop=false&muted=true&preload=true&responsive=true" class="carousel-item" data-title="Mars Express" data-category="Action, Supernatural">
         <img src="image/Marsepress movie.jpg" alt="Mars Express" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1321,7 +1462,7 @@
         </div>
       </a>
       
-      <a href="/watch/13" class="carousel-item" data-title="The Witcher Sirens of the Deep" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/706408f3-7d1f-4ef5-a079-0acecd21195a?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="The Witcher Sirens of the Deep" data-category="Action, Supernatural">
         <img src="image/the witcher sirens of the deep.png" alt="The Witcher Sirens of the Deep" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1330,7 +1471,7 @@
         </div>
       </a>
       
-       <a href="/watch/13" class="carousel-item" data-title="The bads Guys Haunted Heist" data-category="Action, Supernatural">
+       <a href="https://iframe.mediadelivery.net/embed/423812/b244afef-0541-4074-a5ab-ede2eca95ccf?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="The bads Guys Haunted Heist" data-category="Action, Supernatural">
         <img src="image/bad guys haunted movie.jpg" alt="The bads Guys Haunted Heist" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1339,7 +1480,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Orion and the Dark" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/16ebfa61-0069-4178-8559-d80aafc63fd6?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Orion and the Dark" data-category="Action, Supernatural">
         <img src="image/orion and the dark movie.jpg" alt="Orion and the Dark" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1348,7 +1489,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Moana 2" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/3de3b384-058d-47ac-96b6-1cdb8450f8b4?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Moana 2" data-category="Action, Supernatural">
         <img src="image/moana 2 movie.jpg" alt="Moana 2" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1357,7 +1498,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Moana 1" data-category="Action, Supernatural">
+      <a href="?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Moana 1" data-category="Action, Supernatural">
         <img src="image/moana 1 movie.webp" alt="Moana 2" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1366,7 +1507,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="The Boy, the Mole, the Fox and the Horse" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed//423812/0b3daee4-9521-4d91-9b2d-e27c10195ffe?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="The Boy, the Mole, the Fox and the Horse" data-category="Action, Supernatural">
         <img src="image/demon-slayer.jpg" alt="The Boy, the Mole, the Fox and the Horse" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1375,7 +1516,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Mummies" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/7ee909d5-2a1f-47c9-8bf2-6e25511e3aec?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Mummies" data-category="Action, Supernatural">
         <img src="image/demon-slayer.jpg" alt="Mummies" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1384,7 +1525,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Transformers One" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/3e16bec4-034c-4e71-baf3-fefd985657c5?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Transformers One" data-category="Action, Supernatural">
         <img src="image/transformer 1 anime.jpg" alt="Transformers One" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1393,7 +1534,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Kingsglaive Final Fantasy XV (Dual) 2016" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/3a9d26b7-2317-4dc9-a771-d73a2914f8e7?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Kingsglaive Final Fantasy XV (Dual) 2016" data-category="Action, Supernatural">
         <img src="image/kingsglaive XV.jpg" alt="Kingsglaive Final Fantasy XV (Dual) 2016" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1402,7 +1543,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Pokemon the movie The powe of us" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/43139686-f065-49f2-b05b-62814ef21b25?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Pokemon the movie The powe of us" data-category="Action, Supernatural">
         <img src="image/pokemon the power of us movie.jpg" alt="Pokemon the movie The powe of us" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1411,7 +1552,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Noahs Ark" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/01e8f4af-844e-4493-b98a-04d261e5e693?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Noahs Ark" data-category="Action, Supernatural">
         <img src="image/Kung fu Panda 1.jpg" alt="Noahs Ark" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1420,7 +1561,7 @@
         </div>
       </a>
 
-      <a href="/watch/13" class="carousel-item" data-title="Tad, the Lost Explorer and the Emerald Tablet (Dual) 2022" data-category="Action, Supernatural">
+      <a href="https://iframe.mediadelivery.net/embed/423812/7c7554bb-4c2e-47c2-baad-df3194d3afd7?autoplay=true&loop=false&muted=false&preload=true&responsive=true" class="carousel-item" data-title="Tad, the Lost Explorer and the Emerald Tablet (Dual) 2022" data-category="Action, Supernatural">
         <img src="image/demon-slayer.jpg" alt="Tad, the Lost Explorer and the Emerald Tablet (Dual) 2022" class="content-img">
         <div class="content-overlay"></div>
         <div class="content-info">
@@ -1429,8 +1570,103 @@
         </div>
       </a>
     </div>
+    
 
     <button class="carousel-nav next" data-carousel="popular-in-carousel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+</div>
+
+        <!-- Doraemon Movies Section -->
+<div class="content-row">
+  <div class="row-header">
+    <h2 class="row-title">Doraemon Movies</h2>
+    <a href="#" class="view-all">
+      View All
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </a>
+  </div>
+  <div class="carousel-container">
+    <button class="carousel-nav prev" data-carousel="doraemon-carousel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <div class="carousel-content" id="doraemon-carousel">
+      <!-- Content Cards -->
+      <a href="/watch/101" class="carousel-item" data-title="Doraemon: Nobita's Sky Utopia" data-category="Adventure, Comedy">
+        <img src="images/doraemon1.jpg" alt="Doraemon Sky Utopia" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Nobita's Sky Utopia</h3>
+          <p class="content-meta">2023 • Adventure, Comedy</p>
+        </div>
+      </a>
+      <a href="/watch/102" class="carousel-item" data-title="Doraemon Nobita's Secret Gadget Museum" data-category="Adventure, Family">
+        <img src="images/doraemon2.jpg" alt="Doraemon Nobita's Secret Gadget Museum" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Doraemon Nobita's Secret Gadget Museum</h3>
+          <p class="content-meta">2013 • Adventure, Family</p>
+        </div>
+      </a>
+      <a href="/watch/103" class="carousel-item" data-title="Doraemon: Stand by Me" data-category="Animation, Drama">
+        <img src="images/doraemon3.jpg" alt="Stand by Me" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Doraemon Nobitas Great Adventure In The Antarctic Kachi Kochi 2017</h3>
+          <p class="content-meta">2020 • Animation, Drama</p>
+        </div>
+      </a>
+      <a href="/watch/103" class="carousel-item" data-title="Doraemon: Stand by Me" data-category="Animation, Drama">
+        <img src="images/doraemon3.jpg" alt="Stand by Me" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Doraemon Nobitas Dinosaur</h3>
+          <p class="content-meta">1980 • Animation, Drama</p>
+        </div>
+      </a>
+      <a href="/watch/103" class="carousel-item" data-title="Doraemon: Stand by Me" data-category="Animation, Drama">
+        <img src="images/doraemon3.jpg" alt="Stand by Me" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Doraemon Nobitas Little Star Wars </h3>
+          <p class="content-meta">1985 • Animation, Drama</p>
+        </div>
+      </a>
+      <a href="/watch/103" class="carousel-item" data-title="Doraemon: Stand by Me" data-category="Animation, Drama">
+        <img src="images/doraemon3.jpg" alt="Stand by Me" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Doraemon Nobitas Little Star Wars </h3>
+          <p class="content-meta">1985 • Animation, Drama</p>
+        </div>
+      </a>
+      <a href="/watch/103" class="carousel-item" data-title="Doraemon: Stand by Me" data-category="Animation, Drama">
+        <img src="images/doraemon3.jpg" alt="Stand by Me" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Doraemon Nobita And The New Steel Troops </h3>
+          <p class="content-meta">2011 • Animation, Drama</p>
+        </div>
+      </a>
+      <a href="/watch/103" class="carousel-item" data-title="Doraemon: Stand by Me" data-category="Animation, Drama">
+        <img src="images/doraemon3.jpg" alt="Stand by Me" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">blank </h3>
+          <p class="content-meta">1985 • Animation, Drama</p>
+        </div>
+      </a>
+
+      <!-- Add more movies as needed -->
+    </div>
+    <button class="carousel-nav next" data-carousel="doraemon-carousel">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
@@ -1909,6 +2145,26 @@
     document.getElementById('player').style.display = 'block';
   }
     });
+    
+  function playMux(playbackId, title) {
+    const player = document.getElementById('main-player');
+    player.setAttribute('playback-id', playbackId);
+    player.setAttribute('metadata-video-title', title);
+    player.currentTime = 0;
+    player.play();
+  }
+  function playMux(playbackId, title) {
+    const player = document.getElementById('main-player');
+    player.playbackId = playbackId;
+    player.metadata = {
+      video_title: title,
+      viewer_user_id: 'user001'
+    };
+    player.style.display = 'block';  // Show player
+    player.currentTime = 0;
+    player.play();
+  }
+
     
   </script>
 </body>
