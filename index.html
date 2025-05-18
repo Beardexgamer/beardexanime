@@ -677,122 +677,10 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    /* CPM Ad Box (fixed in corner, 300x250) */
-    #cpm-ad-box {
-      width: 300px;
-      height: 250px;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      background: #000;
-      border-radius: 8px;
-      overflow: hidden;
-      display: none; /* Hidden initially */
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-
-    /* Close Button Styling */
-    #cpm-ad-box button {
-      position: absolute;
-      top: 4px;
-      right: 4px;
-      background: red;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      cursor: pointer;
-      font-weight: bold;
-      line-height: 20px;
-      z-index: 10000; /* Ensure it's clickable */
-    }
-
-    /* CPM iframe styling */
-    #cpm-ad-box iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    mux-player <style>
-  .carousel-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px 0;
-  }
-
-  .carousel-content {
-    display: flex;
-    gap: 16px;
-  }
-
-  .carousel-item {
-    display: inline-block;
-    position: relative;
-    width: 220px;
-    height: 124px;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #111;
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .content-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 8px;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color: #fff;
-  }
-
-  .content-title {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 2px;
-  }
-
-  .content-meta {
-    font-size: 12px;
-    color: #ccc;
-  }
-
-  .row-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 4px;
-    margin-top: 24px;
-  }
-
-  .row-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-  }
-
-  .view-all {
-    font-size: 14px;
-    color: #aaa;
-    text-decoration: none;
-  }
- </style>
+</style>
 </head>
 <body>
-  </style>
-</head>
-<body>
-  
-  <header class="header">
+ <header class="header">
     <div class="header-left">
       <a href="index.html" class="logo">
         <!-- Logo image: 40x40px -->
@@ -869,9 +757,7 @@
         </div>
       </div>
     </section>
-
-  
-
+ 
     <!-- Content Tabs -->
     <section class="content-section">
       <div class="tabs">
@@ -1041,6 +927,38 @@
                     <p class="content-meta">2023 • Action</p>
                   </div>
                 </a>
+                <a href="/watch/9" class="carousel-item" data-title="Kaiju no 8" data-category="Action">
+                  <img src="image/kaiju no 8 grid.webp" alt="Kaiju no 8" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Kaiju no 8 </h3>
+                    <p class="content-meta">2024 • Action</p>
+                  </div>
+                </a>
+                <a href="/watch/10" class="carousel-item" data-title="Berserk of Gluttony" data-category="Adventure, Action, Romance">
+                  <img src="image/ruroni kenshin INIDA GRID grid.jpg" alt="Berserk of Gluttony" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">Berserk of Gluttony</h3>
+                    <p class="content-meta">2023 • Adventure</p>
+                  </div>
+                </a>
+                <a href="/watch/10" class="carousel-item" data-title="Rurouni Kenshin" data-category="Adventure, Action, Romance">
+                  <img src="image/ruroni kenshin INIDA GRID grid.jpg" alt="IRurouni Kenshin" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">My Unique Skill Makes Me Op even at level 1</h3>
+                    <p class="content-meta">2023 • Adventure</p>
+                  </div>
+                </a>
+                <a href="/watch/10" class="carousel-item" data-title="I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability" data-category="Adventure, Action, Romance">
+                  <img src="image/ruroni kenshin INIDA GRID grid.jpg" alt="I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability" class="content-img">
+                  <div class="content-overlay"></div>
+                  <div class="content-info">
+                    <h3 class="content-title">I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability</h3>
+                    <p class="content-meta">2023 • Adventure</p>
+                  </div>
+                </a>
                 <a href="/watch/10" class="carousel-item" data-title="Rurouni Kenshin" data-category="Adventure, Action, Romance">
                   <img src="image/ruroni kenshin INIDA GRID grid.jpg" alt="IRurouni Kenshin" class="content-img">
                   <div class="content-overlay"></div>
@@ -1097,6 +1015,458 @@
               </button>
             </div>
           </div>
+          
+          <div class="content-row">
+  <div class="row-header">
+    <h2 class="row-title">Available in Hindi</h2>
+    <a href="#" class="view-all">
+      View All
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-nav prev" data-carousel="hindi-anime-carousel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="carousel-content" id="hindi-anime-carousel">
+      <!-- Each item below is one anime -->
+      <a href="/watch/berserk-of-gluttony-hindi" class="carousel-item" data-title="Berserk of Gluttony" data-category="Fantasy, Action">
+        <img src="image/berserk of gluttony grid.png" alt="Berserk of Gluttony" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Berserk of Gluttony</h3>
+          <p class="content-meta">Hindi Dub • Fantasy, Action</p>
+        </div>
+      </a>
+
+      <a href="/watch/mushoku-tensei-hindi" class="carousel-item" data-title="Mushoku Tensei" data-category="Fantasy, Isekai">
+        <img src="image/mhusko tensie grid.jpg" alt="Mushoku Tensei" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Mushoku Tensei</h3>
+          <p class="content-meta">Hindi Dub • Fantasy, Isekai</p>
+        </div>
+      </a>
+
+      <a href="/watch/my-unique-skill-op-hindi" class="carousel-item" data-title="My Unique Skill Makes Me OP Even at Level 1" data-category="Comedy, Fantasy">
+        <img src="image/my uniqe skill make me op1 grid.jpeg" alt="My Unique Skill Makes Me OP" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">My Unique Skill Makes Me OP Even at Level 1</h3>
+          <p class="content-meta">Hindi Dub • Comedy, Fantasy</p>
+        </div>
+      </a>
+
+      <a href="/watch/slime-hindi" class="carousel-item" data-title="That Time I Got Reincarnated as a Slime" data-category="Adventure, Isekai">
+        <img src="image/slime.jpg" alt="That Time I Got Reincarnated as a Slime" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">That Time I Got Reincarnated as a Slime</h3>
+          <p class="content-meta">Hindi Dub • Adventure, Isekai</p>
+        </div>
+      </a>
+
+      <a href="/watch/7th-prince-hindi" class="carousel-item" data-title="I Was Reincarnated as the 7th Prince" data-category="Magic, Fantasy">
+        <img src="image/i was 7th prince.png" alt="7th Prince" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">I Was Reincarnated as the 7th Prince</h3>
+          <p class="content-meta">Hindi Dub • Magic, Fantasy</p>
+        </div>
+      </a>
+
+      <a href="/watch/i-shall-survive-using-potions-hindi" class="carousel-item" data-title="I Shall Survive Using Potions" data-category="Comedy, Fantasy">
+        <img src="image/potions.jpg" alt="I Shall Survive Using Potions" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">I Shall Survive Using Potions</h3>
+          <p class="content-meta">Hindi Dub • Comedy, Fantasy</p>
+        </div>
+      </a>
+
+      <a href="/watch/cheat-skill-hindi" class="carousel-item" data-title="I Got a Cheat Skill in Another World" data-category="Action, Fantasy">
+        <img src="image/cheat-skill.jpg" alt="Cheat Skill" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">I Got a Cheat Skill in Another World </h3>
+          <p class="content-meta">Hindi Dub • Action, Fantasy</p>
+        </div>
+      </a>
+
+      <a href="/watch/radiant-hindi" class="carousel-item" data-title="Radiant" data-category="Adventure, Magic">
+        <img src="image/radiant.jpg" alt="Radiant" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Radiant</h3>
+          <p class="content-meta">Hindi Dub • Adventure, Magic</p>
+        </div>
+      </a>
+
+      <a href="/watch/vending-machine-hindi" class="carousel-item" data-title="Reborn as a Vending Machine" data-category="Comedy, Fantasy">
+        <img src="image/vending-machine.jpg" alt="Vending Machine" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Vending Machine</h3>
+          <p class="content-meta">Hindi Dub • Comedy, Fantasy</p>
+        </div>
+      </a>
+
+      <a href="/watch/assassination-classroom-hindi" class="carousel-item" data-title="Assassination Classroom" data-category="Action, School">
+        <img src="image/assassination-classroom.jpg" alt="Assassination Classroom" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Assassination Classroom</h3>
+          <p class="content-meta">Hindi Dub • Action, School</p>
+        </div>
+      </a>
+
+      <a href="/watch/banished-from-heroes-party-hindi" class="carousel-item" data-title="Banished from the Hero's Party" data-category="Fantasy, Romance">
+        <img src="image/banished.jpg" alt="Banished from the Hero's Party" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Banished Hero</h3>
+          <p class="content-meta">Hindi Dub • Fantasy, Slice of Life</p>
+        </div>
+      </a>
+
+      <a href="/watch/red-ranger-hindi" class="carousel-item" data-title="The Red Ranger Becomes an Adventurer" data-category="Action, Comedy">
+        <img src="image/red-ranger.jpg" alt="Red Ranger" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Red Ranger</h3>
+          <p class="content-meta">Hindi Dub • Action, Comedy</p>
+        </div>
+      </a>
+
+      <a href="/watch/my-one-hit-kill-sister-hindi" class="carousel-item" data-title="My One-Hit Kill Sister" data-category="Comedy, Action">
+        <img src="image/one-hit-sister.jpg" alt="One Hit Sister" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">One-Hit Kill Sister</h3>
+          <p class="content-meta">Hindi Dub • Comedy, Action</p>
+        </div>
+      </a>
+
+      <a href="/watch/seven-spellblades-hindi" class="carousel-item" data-title="Reign of the Seven Spellblades" data-category="Magic, School">
+        <img src="image/seven-spellblades.jpg" alt="Seven Spellblades" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Seven Spellblades</h3>
+          <p class="content-meta">Hindi Dub • Magic, School</p>
+        </div>
+      </a>
+
+      <a href="/watch/solo-leveling-hindi" class="carousel-item" data-title="Solo Leveling" data-category="Action, Fantasy">
+        <img src="image/solo-leveling.jpg" alt="Solo Leveling" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Solo Leveling</h3>
+          <p class="content-meta">Hindi Dub • Action, Fantasy</p>
+        </div>
+      </a>
+
+      <a href="/watch/dead-mount-death-play-hindi" class="carousel-item" data-title="Dead Mount Death Play" data-category="Action, Mystery">
+        <img src="image/dead-mount.jpg" alt="Dead Mount Death Play" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Dead Mount Death Play</h3>
+          <p class="content-meta">Hindi Dub • Action, Mystery</p>
+        </div>
+      </a>
+
+      <a href="/watch/shangri-la-frontier-hindi" class="carousel-item" data-title="Shangri-La Frontier" data-category="Action, Game">
+        <img src="image/shangri-la.jpg" alt="Shangri-La Frontier" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Shangri-La Frontier</h3>
+          <p class="content-meta">Hindi Dub • Action, Game</p>
+        </div>
+      </a>
+
+      <a href="/watch/ancient-magus-bride-hindi" class="carousel-item" data-title="The Ancient Magus' Bride" data-category="Fantasy, Romance">
+        <img src="image/ancient-magus.jpg" alt="Ancient Magus Bride" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Ancient Magus' Bride</h3>
+          <p class="content-meta">Hindi Dub • Fantasy, Romance</p>
+        </div>
+      </a>
+
+      <!-- The Strongest Tank’s Labyrinth Raids -->
+<a href="/watch/the-strongest-tanks-labyrinth-raids-hindi" class="carousel-item" data-title="The Strongest Tank’s Labyrinth Raids (Hindi)" data-category="Action, Fantasy">
+  <img src="image/the-strongest-tanks-labyrinth-raids.jpg" alt="The Strongest Tank’s Labyrinth Raids" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">The Strongest Tank’s Labyrinth Raids</h3>
+    <p class="content-meta">Hindi Dub • Action, Fantasy</p>
+  </div>
+</a>
+
+<!-- Magic Maker: How to Make Magic in Another World -->
+<a href="/watch/magic-maker-hindi" class="carousel-item" data-title="Magic Maker: How to Make Magic in Another World (Hindi)" data-category="Isekai, Fantasy">
+  <img src="image/magic-maker.jpg" alt="Magic Maker: How to Make Magic in Another World" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Magic Maker: How to Make Magic in Another World</h3>
+    <p class="content-meta">Hindi Dub • Isekai, Fantasy</p>
+  </div>
+</a>
+
+<!-- Possibly the Greatest Alchemist of All Time -->
+<a href="/watch/possibly-the-greatest-alchemist-of-all-time-hindi" class="carousel-item" data-title="Possibly the Greatest Alchemist of All Time (Hindi)" data-category="Fantasy, Adventure">
+  <img src="image/greatest-alchemist.jpg" alt="Possibly the Greatest Alchemist of All Time" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Possibly the Greatest Alchemist of All Time</h3>
+    <p class="content-meta">Hindi Dub • Fantasy, Adventure</p>
+  </div>
+</a>
+
+<!-- The Case Study of Vanitas -->
+<a href="/watch/the-case-study-of-vanitas-hindi" class="carousel-item" data-title="The Case Study of Vanitas (Hindi)" data-category="Supernatural, Drama">
+  <img src="image/vanitas.jpg" alt="The Case Study of Vanitas" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">The Case Study of Vanitas</h3>
+    <p class="content-meta">Hindi Dub • Supernatural, Drama</p>
+  </div>
+</a>
+
+<!-- The Daily Life of the Immortal King -->
+<a href="/watch/the-daily-life-of-the-immortal-king-hindi" class="carousel-item" data-title="The Daily Life of the Immortal King (Hindi)" data-category="Action, Comedy">
+  <img src="image/immortal-king.jpg" alt="The Daily Life of the Immortal King" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">The Daily Life of the Immortal King</h3>
+    <p class="content-meta">Hindi Dub • Action, Comedy</p>
+  </div>
+</a>
+
+<!-- Demon Lord, Retry! -->
+<a href="/watch/demon-lord-retry-hindi" class="carousel-item" data-title="Demon Lord, Retry! (Hindi)" data-category="Isekai, Fantasy">
+  <img src="image/demon-lord-retry.jpg" alt="Demon Lord, Retry!" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Demon Lord, Retry!</h3>
+    <p class="content-meta">Hindi Dub • Isekai, Fantasy</p>
+  </div>
+</a>
+
+<!-- Wistoria: Wand and Sword -->
+<a href="/watch/wistoria-wand-and-sword-hindi" class="carousel-item" data-title="Wistoria: Wand and Sword (Hindi)" data-category="Action, Magic">
+  <img src="image/wistoria.jpg" alt="Wistoria: Wand and Sword" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Wistoria: Wand and Sword</h3>
+    <p class="content-meta">Hindi Dub • Action, Magic</p>
+  </div>
+</a>
+
+<!-- The Strongest Magician in the Demon Lord's Army was a Human -->
+<a href="/watch/the-strongest-magician-in-demon-lord-army-was-human-hindi" class="carousel-item" data-title="The Strongest Magician in the Demon Lord's Army was a Human (Hindi)" data-category="Fantasy, Magic">
+  <img src="image/strongest-magician.jpg" alt="The Strongest Magician in the Demon Lord's Army was a Human" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">The Strongest Magician in the Demon Lord's Army was a Human</h3>
+    <p class="content-meta">Hindi Dub • Fantasy, Magic</p>
+  </div>
+</a>
+
+<!-- KamiKatsu: Working for God in a Godless World -->
+<a href="/watch/kamikatsu-working-for-god-hindi" class="carousel-item" data-title="KamiKatsu: Working for God in a Godless World (Hindi)" data-category="Comedy, Isekai">
+  <img src="image/kamikatsu.jpg" alt="KamiKatsu: Working for God in a Godless World" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">KamiKatsu: Working for God in a Godless World</h3>
+    <p class="content-meta">Hindi Dub • Comedy, Isekai</p>
+  </div>
+</a>
+
+<!-- Tower of God -->
+<a href="/watch/tower-of-god-hindi" class="carousel-item" data-title="Tower of God (Hindi)" data-category="Adventure, Fantasy">
+  <img src="image/tower-of-god.jpg" alt="Tower of God" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Tower of God</h3>
+    <p class="content-meta">Hindi Dub • Adventure, Fantasy</p>
+  </div>
+</a>
+
+<!-- Bye Bye, Earth -->
+<a href="/watch/bye-bye-earth-hindi" class="carousel-item" data-title="Bye Bye, Earth (Hindi)" data-category="Action, Fantasy">
+  <img src="image/bye-bye-earth.jpg" alt="Bye Bye, Earth" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Bye Bye, Earth</h3>
+    <p class="content-meta">Hindi Dub • Action, Fantasy</p>
+  </div>
+</a>
+
+<!-- Quality Assurance in Another World -->
+<a href="/watch/quality-assurance-in-another-world-hindi" class="carousel-item" data-title="Quality Assurance in Another World (Hindi)" data-category="Isekai, Comedy">
+  <img src="image/quality-assurance.jpg" alt="Quality Assurance in Another World" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Quality Assurance in Another World</h3>
+    <p class="content-meta">Hindi Dub • Isekai, Comedy</p>
+  </div>
+</a>
+
+<!-- Demon Slayer: Kimetsu no Yaiba -->
+<a href="/watch/demon-slayer-hindi" class="carousel-item" data-title="Demon Slayer: Kimetsu no Yaiba (Hindi)" data-category="Action, Demons">
+  <img src="image/demon-slayer.jpg" alt="Demon Slayer: Kimetsu no Yaiba" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Demon Slayer: Kimetsu no Yaiba</h3>
+    <p class="content-meta">Hindi Dub • Action, Demons</p>
+  </div>
+</a>
+
+<!-- Ranking of Kings -->
+<a href="/watch/ranking-of-kings-hindi" class="carousel-item" data-title="Ranking of Kings (Hindi)" data-category="Adventure, Fantasy">
+  <img src="image/ranking-of-kings.jpg" alt="Ranking of Kings" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">Ranking of Kings</h3>
+    <p class="content-meta">Hindi Dub • Adventure, Fantasy</p>
+  </div>
+</a>
+
+<!-- No Longer Allowed in Another World -->
+<a href="/watch/no-longer-allowed-in-another-world-hindi" class="carousel-item" data-title="No Longer Allowed in Another World (Hindi)" data-category="Dark Comedy, Isekai">
+  <img src="image/no-longer-allowed.jpg" alt="No Longer Allowed in Another World" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">No Longer Allowed in Another World</h3>
+    <p class="content-meta">Hindi Dub • Dark Comedy, Isekai</p>
+  </div>
+</a>
+
+<!-- The Weakest Tamer Began a Journey to Pick Up Trash -->
+<a href="/watch/the-weakest-tamer-hindi" class="carousel-item" data-title="The Weakest Tamer Began a Journey to Pick Up Trash (Hindi)" data-category="Slice of Life, Fantasy">
+  <img src="image/weakest-tamer.jpg" alt="The Weakest Tamer Began a Journey to Pick Up Trash" class="content-img">
+  <div class="content-overlay"></div>
+  <div class="content-info">
+    <h3 class="content-title">The Weakest Tamer Began a Journey to Pick Up Trash</h3>
+    <p class="content-meta">Hindi Dub • Slice of Life, Fantasy</p>
+  </div>
+</a>
+
+    </div>
+
+    <button class="carousel-nav next" data-carousel="hindi-anime-carousel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+
+            <div class="content-row">
+  <div class="row-header">
+    <h2 class="row-title">Black Butler</h2>
+    <a href="#" class="view-all">
+      View All
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </a>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-nav prev" data-carousel="black-butler-carousel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+
+    <div class="carousel-content" id="black-butler-carousel">
+      <!-- Season 1 -->
+      <a href="/watch/black-butler-season-1" class="carousel-item" data-title="Black Butler Season 1" data-category="Supernatural, Mystery, Action">
+        <img src="image/black buttler season 1 grid.jpg" alt="Black Butler Season 1" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Black Butler: Season 1</h3>
+          <p class="content-meta">2008 • Supernatural, Mystery, Action</p>
+        </div>
+      </a>
+
+      <!-- Season 2 -->
+      <a href="/watch/black-butler-season-2" class="carousel-item" data-title="Black Butler Season 2" data-category="Supernatural, Drama">
+        <img src="image/black-butler-season-2.jpg" alt="Black Butler Season 2" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Black Butler: Season 2</h3>
+          <p class="content-meta">2010 • Supernatural, Drama</p>
+        </div>
+      </a>
+
+      <!-- Book of Circus -->
+      <a href="/watch/black-butler-book-of-circus" class="carousel-item" data-title="Black Butler: Book of Circus" data-category="Action, Supernatural">
+        <img src="image/black-butler-circus.jpg" alt="Black Butler Book of Circus" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Black Butler II OVA</h3>
+          <p class="content-meta">2014 • Action, Supernatural</p>
+        </div>
+      </a>
+
+      <!-- Book of Murder -->
+      <a href="/watch/black-butler-book-of-murder" class="carousel-item" data-title="Black Butler: Book of Murder" data-category="Mystery, Thriller">
+        <img src="image/black-butler-murder.jpg" alt="Black Butler Book of Murder" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Black Butler :Book of Circus</h3>
+          <p class="content-meta">2014 • Mystery, Thriller</p>
+        </div>
+      </a>
+
+      <!-- Book of the Atlantic -->
+      <a href="/watch/black-butler-atlantic" class="carousel-item" data-title="Black Butler: Book of the Atlantic" data-category="Adventure, Supernatural">
+        <img src="image/black-butler-atlantic.jpg" alt="Black Butler Book of the Atlantic" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Black Butler : Book of the Atlantic</h3>
+          <p class="content-meta">2017 • Adventure, Supernatural</p>
+        </div>
+      </a>
+
+      <a href="/watch/black-butler-atlantic" class="carousel-item" data-title="Black Butler: Book of the Atlantic" data-category="Adventure, Supernatural">
+        <img src="image/black-butler-atlantic.jpg" alt="Black Butler Book of the Atlantic" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Black Butler S4 : public school ARC</h3>
+          <p class="content-meta">2017 • Adventure, Supernatural</p>
+        </div>
+      </a>
+
+      <a href="/watch/black-butler-atlantic" class="carousel-item" data-title="Black Butler: Book of the Atlantic" data-category="Adventure, Supernatural">
+        <img src="image/black-butler-atlantic.jpg" alt="Black Butler Book of the Atlantic" class="content-img">
+        <div class="content-overlay"></div>
+        <div class="content-info">
+          <h3 class="content-title">Black Butler S4 : Emerald Witch ARC</h3>
+          <p class="content-meta">2017 • Adventure, Supernatural</p>
+        </div>
+      </a>
+    </div>
+
+    <button class="carousel-nav next" data-carousel="black-butler-carousel">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
 
           <!-- Popular Shows -->
           <div class="content-row">
@@ -1121,7 +1491,7 @@
                   <img src="https://via.placeholder.com/480x270?text=Last+of+Us" alt="The Last of Us" class="content-img">
                   <div class="content-overlay"></div>
                   <div class="content-info">
-                    <h3 class="content-title">The Last of Us</h3>
+                    <h3 class="content-title">One piece Live</h3>
                     <p class="content-meta">2023 • Drama</p>
                   </div>
                 </a>
